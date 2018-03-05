@@ -89,7 +89,9 @@ public class UserDaoImpl implements UserDao {
         user.setPasswordConfirm(user.getPassword());
 
         UserRole userRole = new UserRole(user, "ROLE_USER");
+        UserRole adminRole = new UserRole(user, "ROLE_ADMIN");
         user.addUserRole(userRole);
+        user.addUserRole(adminRole);
 
         session.flush();
     }

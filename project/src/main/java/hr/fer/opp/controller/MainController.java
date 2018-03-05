@@ -3,6 +3,7 @@ package hr.fer.opp.controller;
 import hr.fer.opp.users.UserWebsiteBuilder;
 import hr.fer.opp.users.dao.UserDao;
 import hr.fer.opp.users.model.User;
+import hr.fer.opp.users.model.UserRole;
 import hr.fer.opp.users.model.UserWebsite;
 import hr.fer.opp.users.model.UserWebsitePost;
 import hr.fer.opp.users.validator.UserValidator;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
@@ -428,7 +430,7 @@ public class MainController {
     }
 
     @RequestMapping(value = "/admin/userInfo/{username}")
-    public ModelAndView userInfo(@NotBlank @PathVariable String username) throws IOException {
+    public ModelAndView userInfo(@NotBlank @PathVariable String username) {
         ModelAndView model = new ModelAndView();
 
         User user = userDao.findByUserName(username);

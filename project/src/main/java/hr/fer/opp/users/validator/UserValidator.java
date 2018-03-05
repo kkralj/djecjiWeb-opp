@@ -71,8 +71,7 @@ public class UserValidator implements Validator {
     }
 
     private boolean isValidEmailAddress(String emailAddress) {
-        String expression = "^[\\w\\-]([\\.\\w])+[\\w]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
-        CharSequence inputStr = emailAddress;
+        String expression = "^[\\w\\-]([.\\w])+[\\w]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(emailAddress);
         return matcher.matches();
