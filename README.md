@@ -1,4 +1,4 @@
-Basic blog building service created in Spring.
+Basic website building service created in Spring.
 
 ### Instructions ###
 1. Run ```mvn package``` and move *.war* file to Tomcat *webapps* folder
