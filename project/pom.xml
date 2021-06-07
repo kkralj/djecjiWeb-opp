@@ -17,7 +17,7 @@
         <spring.security.version>4.0.3.RELEASE</spring.security.version>
         <spring.version>5.2.9.RELEASE</spring.version>
         <servletapi.version>2.5</servletapi.version>
-        <logback.version>1.1.2</logback.version>
+        <logback.version>1.2.0</logback.version>
         <slf4j.version>1.7.6</slf4j.version>
         <jstl.version>1.2</jstl.version>
         <dbcp.version>1.4</dbcp.version>
